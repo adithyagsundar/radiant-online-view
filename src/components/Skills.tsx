@@ -8,51 +8,71 @@ const Skills = () => {
       icon: Code,
       title: 'Development',
       description: 'Full-stack development with modern frameworks and technologies',
-      items: ['React', 'TypeScript', 'Node.js', 'Python']
+      items: ['React', 'TypeScript', 'Node.js', 'Python'],
+      color: 'blue'
     },
     {
       icon: Pencil,
       title: 'Design',
       description: 'Creating beautiful and intuitive user experiences',
-      items: ['UI/UX', 'Figma', 'Adobe Creative Suite', 'Prototyping']
+      items: ['UI/UX', 'Figma', 'Adobe Creative Suite', 'Prototyping'],
+      color: 'purple'
     },
     {
       icon: Briefcase,
       title: 'Strategy',
       description: 'Planning and executing digital solutions effectively',
-      items: ['Project Management', 'Agile', 'Problem Solving', 'Analysis']
+      items: ['Project Management', 'Agile', 'Problem Solving', 'Analysis'],
+      color: 'pink'
     },
     {
       icon: Users,
       title: 'Collaboration',
       description: 'Working effectively with teams and stakeholders',
-      items: ['Communication', 'Leadership', 'Mentoring', 'Client Relations']
+      items: ['Communication', 'Leadership', 'Mentoring', 'Client Relations'],
+      color: 'green'
     }
   ];
 
+  const getColorClasses = (color: string) => {
+    switch(color) {
+      case 'blue': return { bg: 'bg-blue-50', text: 'text-blue-600', icon: 'bg-blue-100 text-blue-600' };
+      case 'purple': return { bg: 'bg-purple-50', text: 'text-purple-600', icon: 'bg-purple-100 text-purple-600' };
+      case 'pink': return { bg: 'bg-pink-50', text: 'text-pink-600', icon: 'bg-pink-100 text-pink-600' };
+      case 'green': return { bg: 'bg-green-50', text: 'text-green-600', icon: 'bg-green-100 text-green-600' };
+      default: return { bg: 'bg-gray-50', text: 'text-gray-600', icon: 'bg-gray-100 text-gray-600' };
+    }
+  };
+
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50">
+    <section id="skills" className="py-20 px-6 bg-gradient-to-b from-white to-blue-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Skills & Expertise</h2>
-          <div className="w-20 h-0.5 bg-gray-300 mx-auto"></div>
+          <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((skill, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <skill.icon className="w-6 h-6 text-gray-600" />
+          {skills.map((skill, index) => {
+            const colors = getColorClasses(skill.color);
+            return (
+              <div 
+                key={index} 
+                className={`${colors.bg} p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
+              >
+                <div className={`w-12 h-12 ${colors.icon} rounded-lg flex items-center justify-center mb-6`}>
+                  <skill.icon className="w-6 h-6" />
+                </div>
+                <h3 className={`text-xl font-medium ${colors.text} mb-3`}>{skill.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{skill.description}</p>
+                <ul className="space-y-1">
+                  {skill.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">{item}</li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">{skill.title}</h3>
-              <p className="text-gray-600 mb-4 text-sm leading-relaxed">{skill.description}</p>
-              <ul className="space-y-1">
-                {skill.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-sm text-gray-500">{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
