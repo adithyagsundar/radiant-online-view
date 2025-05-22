@@ -10,7 +10,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       link: '#',
-      color: 'blue'
+      color: 'orange'
     },
     {
       title: 'Task Management App',
@@ -18,7 +18,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop&crop=center',
       tags: ['TypeScript', 'React', 'Socket.io', 'PostgreSQL'],
       link: '#',
-      color: 'purple'
+      color: 'amber'
     },
     {
       title: 'Portfolio Website',
@@ -26,15 +26,15 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&crop=center',
       tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
       link: '#',
-      color: 'pink'
+      color: 'yellow'
     }
   ];
 
   const getTagColor = (projectColor: string) => {
     switch(projectColor) {
-      case 'blue': return 'bg-blue-100 text-blue-600';
-      case 'purple': return 'bg-purple-100 text-purple-600';
-      case 'pink': return 'bg-pink-100 text-pink-600';
+      case 'orange': return 'bg-orange-100 text-orange-600';
+      case 'amber': return 'bg-amber-100 text-amber-600';
+      case 'yellow': return 'bg-yellow-100 text-yellow-600';
       default: return 'bg-gray-100 text-gray-600';
     }
   };
@@ -44,7 +44,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Featured Projects</h2>
-          <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          <div className="w-20 h-0.5 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,7 +60,7 @@ const Projects = () => {
                   <Link className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">{project.title}</h3>
+              <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">{project.title}</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, tagIndex) => (

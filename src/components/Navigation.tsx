@@ -22,7 +22,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gradient-to-r from-blue-500/80 to-purple-500/80 backdrop-blur-md shadow-md' : 'bg-transparent'
+      isScrolled ? 'bg-gradient-to-r from-orange-500/80 to-yellow-500/80 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
@@ -32,7 +32,7 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-white hover:text-blue-200 transition-all duration-200 capitalize hover:scale-110"
+                className="text-white hover:text-orange-200 transition-all duration-200 capitalize hover:scale-110"
               >
                 {item}
               </button>
