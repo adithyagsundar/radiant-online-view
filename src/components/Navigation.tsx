@@ -27,11 +27,13 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100' : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold text-white">
+          <Link to="/" className={`text-xl font-bold transition-colors duration-300 ${
+            isScrolled ? 'text-gray-800' : 'text-gray-800'
+          }`}>
             Portfolio
           </Link>
           <div className="hidden md:flex space-x-6">
@@ -39,8 +41,12 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-white hover:text-blue-200 transition-all duration-200 hover:scale-110 ${
-                  location.pathname === item.path ? 'text-blue-200 font-medium' : ''
+                className={`transition-all duration-200 hover:scale-105 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-slate-600' 
+                    : 'text-gray-800 hover:text-slate-600'
+                } ${
+                  location.pathname === item.path ? 'text-slate-600 font-medium' : ''
                 }`}
               >
                 {item.name}
