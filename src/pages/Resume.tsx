@@ -1,96 +1,160 @@
-
 import React from 'react';
 import Navigation from '../components/Navigation';
-import { FileText, Mail, Briefcase } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const Resume = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
       <Navigation />
       
       <div className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-4">Professional Development</h1>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-slate-400 to-gray-600 mx-auto"></div>
+            <h1 className="text-4xl md:text-5xl font-light text-white mb-4">Resume</h1>
+            <div className="w-20 h-0.5 bg-gradient-to-r from-slate-600 to-slate-500 mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-gray-600 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-semibold text-gray-800">Cover Letter</h2>
+          <div className="animate-fade-in bg-white/5 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-slate-700 hover:border-purple-600 hover:shadow-purple-500/30 transition-all duration-300">
+            <div className="space-y-6">
+              {/* Contact Information */}
+              <div className="text-center">
+                <h2 className="text-3xl font-bold text-white mb-2">Adithya Gnanasundar</h2>
+                <p className="text-gray-200">Dublin, CA | (925-577-2088) | (tnt.adithya@gmail.com)</p>
               </div>
-              <div className="text-gray-600 leading-relaxed">
-                <p className="mb-4">
-                  A professionally crafted cover letter tailored to specific job opportunities, 
-                  highlighting relevant CTE skills and experiences.
-                </p>
-                <p className="mb-4">
-                  Key elements include personalized content, specific achievements, 
-                  and clear connections between my qualifications and employer needs.
-                </p>
-                <button className="px-6 py-2 bg-gradient-to-r from-slate-500 to-gray-600 text-white rounded-lg hover:shadow-lg transition-all duration-300">
-                  View Cover Letter
-                </button>
-              </div>
-            </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500 to-slate-600 rounded-lg flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-semibold text-gray-800">Resume</h2>
+              {/* Summary of Skills/Qualifications */}
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Professional Summary</h2>
+                <p className="text-gray-200 leading-relaxed">
+                  Hardworking and competent high school student with extensive knowledge across technology and business. Punctual and professional and driven to perform successfully as a part of a team.
+                </p>
               </div>
-              <div className="text-gray-600 leading-relaxed">
-                <p className="mb-4">
-                  Comprehensive resume showcasing CTE education, technical skills, 
-                  work experience, and academic achievements.
-                </p>
-                <p className="mb-4">
-                  Formatted professionally with clear sections for education, 
-                  skills, experience, and accomplishments relevant to my career field.
-                </p>
-                <button className="px-6 py-2 bg-gradient-to-r from-gray-500 to-slate-600 text-white rounded-lg hover:shadow-lg transition-all duration-300">
-                  View Resume
-                </button>
+
+              {/* Skills */}
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Skills</h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  <p className="text-gray-200 font-medium">• Business Development</p>
+                  <p className="text-gray-200 font-medium">• Machine Learning</p>
+                  <p className="text-gray-200 font-medium">• Data Analytics</p>
+                  <p className="text-gray-200 font-medium">• Leadership</p>
+                  <p className="text-gray-200 font-medium">• Team Collaboration</p>
+                  <p className="text-gray-200 font-medium">• Project Management</p>
+                </div>
+              </div>
+
+              {/* Experience/Work History */}
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Professional Experience</h2>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-lg font-semibold text-gray-100">Machine Learning Research Intern</h3>
+                      <p className="text-gray-200 italic">02/2024 - Present</p>
+                    </div>
+                    <p className="text-gray-200 font-medium">University of Illinois, Urbana-Champaign</p>
+                    <p className="text-gray-200 italic">Under Professor Varun Chandrasekaran</p>
+                    <ul className="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                      <li>Spearheaded novel research on "Machine Unlearning," enhancing security in large language models</li>
+                      <li>Conducted comprehensive literature reviews on NLP and machine unlearning</li>
+                      <li>Collaborated with 5 college-level researchers; paper pending publication</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-lg font-semibold text-gray-100">Machine Learning Research Intern</h3>
+                      <p className="text-gray-200 italic">06/2024 - Present</p>
+                    </div>
+                    <p className="text-gray-200 font-medium">University of California, Santa Cruz</p>
+                    <p className="text-gray-200 italic">Under Professor Leilani Gilpin</p>
+                    <ul className="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                      <li>Implemented weekly tasks on LLMs, NLP, logic, and explainability</li>
+                      <li>Deployed Kubernetes and Docker for GPU-intensive coding tasks</li>
+                      <li>Developed logical layer integration using Prolog for LLMs</li>
+                      <li>Proposed and initiated novel NLP explainability project</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-lg font-semibold text-gray-100">Business Development Intern</h3>
+                      <p className="text-gray-200 italic">11/2023 - 02/2024</p>
+                    </div>
+                    <p className="text-gray-200 font-medium">JETSON</p>
+                    <ul className="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                      <li>Led direct communication with growth leads of Jetson AI</li>
+                      <li>Developed and implemented outreach strategy for high school entrepreneurship workshops</li>
+                      <li>Organized and hosted workshop with 40+ attendees</li>
+                    </ul>
+                  </div>
+
+                  {/* New Tesla Project Entry */}
+                  <div>
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-lg font-semibold text-gray-100">Academic Project: Tesla Product/Service Management</h3>
+                      <p className="text-gray-200 italic">Date of Project</p>{/* Placeholder */}
+                    </div>
+                    <p className="text-gray-200 font-medium">Course Name/Institution (if applicable)</p>{/* Placeholder */}
+                    <ul className="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                      <li>Researched and analyzed Tesla's business, focusing on product development and business product mix.</li>
+                      <li>Developed a Unique Selling Proposition (USP) for Tesla/a specific Tesla product.</li>
+                      <li>Presented findings in a slide deck format.</li>
+                      {/* Add more specific details here if you have them */}
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Education */}
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Education</h2>
+                <div>
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-lg font-semibold text-gray-100">Dublin High School</h3>
+                    <p className="text-gray-200 italic">Expected Graduation: 2026</p>
+                  </div>
+                  <p className="text-gray-200">Dublin, CA</p>
+                  <p className="text-gray-200">GPA: 4.22/4.0 Weighted, 3.92/4.0 Unweighted</p>
+                  <p className="text-gray-200 mt-1">AP Courses: Calculus AB, Calculus BC, Chemistry, CSP, English Lang, US History, World History</p>
+                </div>
+              </div>
+
+              {/* Honors and Awards */}
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Awards & Recognition</h2>
+                <ul className="list-disc list-inside text-gray-200 space-y-1">
+                  <li>DECA California State CDC 2024: 2nd Place Integrated Marketing Campaign Service (IMCS)</li>
+                  <li>3rd Place in Software Category Award at Alameda County Science and Engineering Fair</li>
+                  <li>DECA California State CDC 2025: 4th Place in Entrepreneurship Team Decision Making (ETDM)</li>
+                </ul>
+              </div>
+
+              {/* Activities/Community Service */}
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Activities & Community Service</h2>
+                <ul className="list-disc list-inside text-gray-200 space-y-1">
+                  <li>Marketing Volunteer at Amba Farmers Voice (Jan 2023 - May 2023)</li>
+                  <li>Alameda County District 1 Intern and Volunteer (Jun 2023 - Jul 2024)</li>
+                  <li>President's Volunteer Service Award (Jun 2023)</li>
+                  <li>Inducted Member of National Honors Society (Oct 2023 - May 2024)</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-zinc-500 to-slate-600 rounded-lg flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-800">Professional Documents</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-800 mb-2">References</h3>
-                <p className="text-sm text-gray-600 mb-4">Professional references from instructors and employers</p>
-                <button className="px-4 py-2 text-slate-600 border border-slate-400 rounded-lg hover:bg-slate-50 transition-colors duration-300">
-                  View References
-                </button>
-              </div>
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-800 mb-2">Job Application</h3>
-                <p className="text-sm text-gray-600 mb-4">Sample completed job application demonstrating attention to detail</p>
-                <button className="px-4 py-2 text-slate-600 border border-slate-400 rounded-lg hover:bg-slate-50 transition-colors duration-300">
-                  View Application
-                </button>
-              </div>
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-800 mb-2">Portfolio Summary</h3>
-                <p className="text-sm text-gray-600 mb-4">Comprehensive overview of professional development journey</p>
-                <button className="px-4 py-2 text-slate-600 border border-slate-400 rounded-lg hover:bg-slate-50 transition-colors duration-300">
-                  View Summary
-                </button>
-              </div>
-            </div>
+          {/* LinkedIn Link */}
+          <div className="mt-8 text-center">
+            <a 
+              href="https://www.linkedin.com/in/adithya-gnanasundar-b0825a260/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 text-slate-300 hover:text-slate-200 transition-colors duration-300"
+            >
+              <Linkedin className="w-6 h-6" />
+              <span>Connect with me on LinkedIn</span>
+            </a>
           </div>
         </div>
       </div>
