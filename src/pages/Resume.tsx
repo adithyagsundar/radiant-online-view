@@ -88,6 +88,8 @@ const Resume = () => {
                       <li>Organized and hosted workshop with 40+ attendees</li>
                     </ul>
                   </div>
+                </div>
+              </div>
 
               {/* Education */}
               <div>
