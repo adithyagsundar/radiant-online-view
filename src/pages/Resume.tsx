@@ -89,24 +89,6 @@ const Resume = () => {
                     </ul>
                   </div>
 
-                  {/* New Tesla Project Entry */}
-                  <div>
-                    <div className="flex justify-between items-start">
-                      <h3 className="text-lg font-semibold text-gray-100">Academic Project: Tesla Product/Service Management</h3>
-                      <p className="text-gray-200 italic">Date of Project</p>{/* Placeholder */}
-                    </div>
-                    <p className="text-gray-200 font-medium">Course Name/Institution (if applicable)</p>{/* Placeholder */}
-                    <ul className="list-disc list-inside text-gray-200 mt-2 space-y-1">
-                      <li>Researched and analyzed Tesla's business, focusing on product development and business product mix.</li>
-                      <li>Developed a Unique Selling Proposition (USP) for Tesla/a specific Tesla product.</li>
-                      <li>Presented findings in a slide deck format.</li>
-                      {/* Add more specific details here if you have them */}
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-
               {/* Education */}
               <div>
                 <h2 className="text-xl font-bold text-white mb-2 border-b border-slate-700 pb-1">Education</h2>
